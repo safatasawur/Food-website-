@@ -291,11 +291,12 @@ margin-bottom: 5px;
 
 .foodmenu-item{
     display: flex;
-    width: 48%; /* Two per row, with spacing */
-    margin: 1%;  /* Add spacing between */
-    box-sizing: border-box;
     margin-top: 5px;
-    /* flex: 1 1 600px; */
+    flex: 1 1 48%; 
+    box-sizing: border-box;
+    min-width: 300px;
+    justify-content: space-evenly;
+
     
 
 
@@ -303,7 +304,10 @@ margin-bottom: 5px;
 .foodmenu-container{
     display: flex;
     flex-wrap: wrap;
-    padding: 50px 0px 30px 0px;
+    padding: 50px 0px 30px 0px;}
+    .foodmenu-container {
+    gap: 20px; /* space between items */
+    justify-content: space-between;
     
 }
 .food-image img {
@@ -322,10 +326,71 @@ margin-bottom: 5px;
  }
 .food-description{
     margin: auto;
-    padding-left: 5px;
+    padding-left: 1.5rem;
 
     
 }  
 .food-description p{
     font-size: 1.3rem;
+    font-weight: 600;
+    color: #666;
+}
+.food-description h2{
+    color: #555;
+    font-weight: 600;
+}
+.food-description .food-price{
+    color: #117964;
+    font-weight: 700;
+}
+/* ###########################################REVIEW-CONATINER##################################### */
+ #testimonials{
+    background: rgb(243, 243, 243);
+    padding: 5rem 0;
+ }
+.testimonial-heading{
+    color: #555;
+    margin: auto;
+    text-align: center;
+    font-size: 3rem;
+}
+
+
+.review-container{
+    display: flex;
+    margin: auto; 
+    justify-content: space-between;
+    gap: 10px;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.6rem;
+    padding: 1rem}
+.review-container .customer-img{
+    object-fit: cover;
+    object-position: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display:block;
+    margin: auto;
+    transition: all 0.3s ease-in-out;
+}
+/* .customer-img:hover{
+    width: 150px;
+    height: 150px;
+    border-radius: 60%;
+} */
+
+.review-container .checked{
+    color: #ff9529;
+}
+ .review{
+    transition: all 0.3s ease-in-out;
+}
+.review:hover{
+    /* width: 100%; */
+    
+     transform: scale(1.05); /* Slight zoom out effect */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Optional: give a nice lift */
+    cursor: pointer;
 }
