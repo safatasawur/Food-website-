@@ -279,10 +279,7 @@ margin-bottom: 5px;
     transition: font-size 0.3s ease-in-out;
 
 }
-.foodmenu-heading:hover h1{
-    font-size: 4rem;
-    cursor: pointer;
-}
+
 
 
 .foodmenu-item{
@@ -551,5 +548,52 @@ margin-bottom: 5px;
     }
     .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
         transform: rotate(-45deg);
+    }
+
+    .food-image img {
+    border-radius: 200px;
+    height: 250px;
+    display: block;
+    object-fit: cover;
+    object-position: right;
+    width: 250px;
+}
+
+
+}
+
+@media (max-width:500px) {
+    html{
+        font-size: 50%;
+    }
+
+    .foodmenu-item{
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+        text-align: center;
+    }
+    .foodmenu-item .foo-image{
+        margin: auto;
+        width: 100px;
+        height: 100px;
+    }
+    .review-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .review{
+        margin-top: 5px;
+    }
+    .contact-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-form{
+        width: 90%;
+    }.contact-img{
+        width:90%;
+        margin: auto;
+        
     }
 }
