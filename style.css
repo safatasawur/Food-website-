@@ -13,12 +13,7 @@ body{
       font-family: "Oswald", sans-serif;
 
 }
-/* ################################################media queries##################################################### */
-@media (max-width: 768px) {
-    .foodmenu-item {
-        width: 100%;
-    }
-}
+
 
 /* ##############################utility classes ################################################# */
 .container{
@@ -393,4 +388,167 @@ margin-bottom: 5px;
      transform: scale(1.05); /* Slight zoom out effect */
     box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Optional: give a nice lift */
     cursor: pointer;
+}
+/* ###############################CONTACT############################### */
+#contact{
+    padding: 5rem 0;
+    background: rgb(246, 246, 246);
+}
+.contact-container{
+    display: flex;
+    background: #fff;
+    animation: slideFade 1s ease-out forwards;
+}
+.contact-img{
+    width: 50%;
+}
+.contact-img img{
+    display: block;
+    height: 400px;
+    object-fit: cover;
+    object-position: center ;
+    width: 100%;
+}
+.contact-form{
+    padding: 2rem  1rem;
+     margin: 0 auto;
+     width: 50%;
+}
+.contact-form input,textarea{
+    display: block;
+    /* margin-top: 15px; */
+    border: none;
+    border-bottom: 1px  solid #555;
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: none;
+    margin-bottom: 1rem;
+    color: #444;
+}
+.contact-form h2{
+    color: #555;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.contact-form a{
+    font-size: 1.7rem;
+}
+
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ########################################FOOTER############################# */
+#footer h2{
+    font-size: 2rem;
+    color: #fff;
+    padding: 2rem ;
+    text-align: center;
+    background: rgb(65, 65, 65);
+}
+
+/* #####################MEDIA QUERIES############################################### */
+@media (max-width:786px){
+    .navbar{
+        opacity: 0.95;
+    }
+    .navbar input[type='checkbox'],
+    .navbar .hamburger-lines{
+        display: block;
+    }
+    .navbar-container{
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+    .navbar input[type='checkbox']{
+        position: absolute;
+        display: block;
+        top: 7px;
+        left:8px;
+        z-index:5 ;
+        opacity: 0;
+        height: 40px;
+        width: 35px;
+
+    }
+    .navbar .hamburger-lines{
+         position: absolute;
+        display: block;
+        top: 10px;
+        left:10px;
+        z-index:2 ;
+        height: 32px;
+        width: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .navbar .hamburger-lines .line{
+        display: block;
+        border-radius: 10px;
+        width: 100%;
+        height: 4px;
+        background: black;
+    }
+    .navbar-container .hamburger-lines .line1{
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar-container .hamburger-lines .line2{
+        
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar-container .hamburger-lines .line3{
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar .menu-items{
+        padding-top : 80px;
+        background: #fff;
+        height: 100vh;
+        max-width: 150px;
+        transform: translateX(-150%);
+        display: flex;
+        flex-direction: column;
+        padding-left: 50px;
+        margin-left: -60px;
+        transition: transform 0.3s ease-in-out;
+        box-shadow: 5px 0px 10px #aaa;
+        top:0;
+    }
+    
+
+    .navbar-container .logo{
+        position: absolute;
+        font-size: 3rem;
+        top :5px;
+        right: 10px;
+
+    }
+    .navbar-container .menu-items li{
+        font-size: 2rem;
+        margin-bottom: 10px;
+
+    }
+    .navbar-container input[type="checkbox"]:checked ~ .menu-items{
+        transform: translateX(0);
+    }
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+        transform: rotate(45deg);
+    }
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+        display: none;
+    }
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+        transform: rotate(-45deg);
+    }
 }
