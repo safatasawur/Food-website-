@@ -526,12 +526,10 @@ margin-bottom: 5px;
     
 
     .navbar-container .logo{
-        position: absolute;
-        font-size: 3rem;
-        top :5px;
-        right: 10px;
-
-    }
+         position: absolute;
+         top: -25px;
+         right: 15px;
+}
     .navbar-container .menu-items li{
         font-size: 2rem;
         margin-bottom: 10px;
@@ -595,5 +593,10 @@ margin-bottom: 5px;
         width:90%;
         margin: auto;
         
+    }
+}
+@media ( orientation: landscape) and (max-height:500px) {
+    #showcase{
+        height: 50vmax;
     }
 }
