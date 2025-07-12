@@ -162,7 +162,7 @@ margin-bottom: 5px;
     display: block;
     max-width: 100%;
     object-fit: cover;
-    object-position: right;
+    object-position: center;
     margin: auto;
     transform: translateX(150%);
     animation: aboutimg-animation 0.8s  forwards ease-in-out;
@@ -608,11 +608,7 @@ margin-bottom: 5px;
         align-items: center;
         text-align: center;
     }
-    .foodmenu-item .foo-image{
-        margin: auto;
-        width: 100px;
-        height: 100px;
-    }
+    
     .review-container {
         flex-direction: column;
         text-align: center;
@@ -631,6 +627,25 @@ margin-bottom: 5px;
         margin: auto;
         
     }
+}
+@media (max-width: 400px) {
+
+     .img-content {
+    position: absolute;
+    transform: translate(-50,-50);
+    top:70%;
+    left:10%;
+    opacity:0;
+    z-index:2;
+    text-align: center;
+    transition: all 0.9s ease-in-out;
+    margin: auto;
+    font-size: 1rem;
+}
+.img-container:hover .img-content{
+    opacity: 1;
+    top: 10%;
+}
 }
 @media ( orientation: landscape) and (max-height:500px) {
     #showcase{
